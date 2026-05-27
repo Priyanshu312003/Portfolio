@@ -10,17 +10,17 @@ const projects = [
       "Modular backend with JWT auth, content CRUD, tag system, public sharing, and Stripe-based Pro plan. AI semantic search in progress.",
     stack: ["NODE.JS", "EXPRESS", "TYPESCRIPT", "MONGODB", "STRIPE"],
     learned: "Designing for billing edge cases is harder than the feature itself.",
-    github: "#",
+    github: "https://github.com/Priyanshu312003/mind-vault",
     demo: "#",
   },
   {
-    name: "Hybrid Summarizer",
+    name: "Text Summarizer",
     tagline: "NLP pipeline",
     description:
       "Web app that returns both extractive and abstractive summaries of input text using a hybrid pipeline.",
     stack: ["PYTHON", "SPACY", "HUGGINGFACE", "BART", "HTML/CSS"],
     learned: "Hybrid models beat single-strategy summarizers on noisy input.",
-    github: "#",
+    github: "https://github.com/Priyanshu312003/Hybrid-Text-Summarization-Tool",
     demo: "#",
   },
   {
@@ -28,9 +28,9 @@ const projects = [
     tagline: "Personal site",
     description:
       "Responsive personal portfolio with animated UI, reusable components, deployed on GitHub Pages.",
-    stack: ["REACT", "JAVASCRIPT", "TAILWIND"],
+    stack: ["REACT", "TYPESCRIPT", "TAILWIND"],
     learned: "A design system pays for itself by the second component.",
-    github: "#",
+    github: "https://github.com/Priyanshu312003/Portfolio",
     demo: "#",
   },
 ];
@@ -104,6 +104,8 @@ export function Projects() {
                 <div className="flex gap-2">
                   <a
                     href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="GitHub"
                     className="h-8 w-8 border border-white/15 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
                   >
@@ -111,6 +113,8 @@ export function Projects() {
                   </a>
                   <a
                     href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Live demo"
                     className="h-8 w-8 border border-white/15 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
                   >
