@@ -46,7 +46,9 @@ export function Blog() {
 
         <div>
           <a
-            href="#"
+            href="https://x.com/afkpriyanshu"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-5 py-3 border border-primary/50 hover:border-primary hover:bg-primary/5 font-mono text-xs uppercase tracking-[0.2em] text-primary transition-all"
           >
             <Twitter className="h-4 w-4" />
