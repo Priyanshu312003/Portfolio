@@ -20,7 +20,7 @@ const skills: Skill[] = [
 ];
 
 function Radar({ skills, active }: { skills: Skill[]; active: number | null }) {
-  const size = 360;
+  const size = 370;
   const cx = size / 2;
   const cy = size / 2;
   const maxR = 140;
