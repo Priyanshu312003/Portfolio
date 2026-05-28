@@ -4,14 +4,15 @@ import { SectionHeader } from "./SectionHeader";
 import { ScrollReveal } from "./ScrollReveal";
 
 const socials = [
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: Twitter, label: "X / Twitter", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Mail, label: "Gmail", href: "#" },
+  { icon: Github, label: "GitHub", href: "https://github.com/Priyanshu312003" },
+  { icon: Twitter, label: "X / Twitter", href: "https://x.com/afkpriyanshu" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/priyanshu-maurya-737757241/" },
+  { icon: Mail, label: "Gmail", href: "mailto:priyanshumaurya.2003@gmail.com" },
 ];
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const inputCls =
     "w-full bg-black/40 border border-white/15 rounded-none px-4 py-3 text-sm font-mono focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/40 transition placeholder:text-muted-foreground/50";
@@ -30,7 +31,22 @@ export function Contact() {
 
         <div className="grid md:grid-cols-5 gap-6 mt-12">
           <form
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setLoading(true);
+              const form = e.target as HTMLFormElement;
+              const data = new FormData(form);
+              const res = await fetch("https://formspree.io/f/mqejwyae", {
+                method: "POST",
+                body: data,
+                headers: { Accept: "application/json" },
+              });
+              if (res.ok) {
+                setSent(true);
+                form.reset();
+              }
+              setLoading(false);
+            }}
             className="term-box p-8 md:col-span-3 space-y-5"
           >
             <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-2">
@@ -47,28 +63,30 @@ export function Contact() {
               <label className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground mb-2 block">
                 {">"} name
               </label>
-              <input required type="text" className={inputCls} placeholder="Your name" />
+              <input required type="text" name="name" className={inputCls} placeholder="Your name" />
             </div>
             <div>
               <label className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground mb-2 block">
                 {">"} email
               </label>
-              <input required type="email" className={inputCls} placeholder="you@domain.com" />
+              <input required type="email" name="email" className={inputCls} placeholder="you@domain.com" />
             </div>
             <div>
               <label className="text-[10px] font-mono uppercase tracking-[0.25em] text-muted-foreground mb-2 block">
                 {">"} message
               </label>
-              <textarea required rows={5} className={`${inputCls} resize-none`} placeholder="What's on your mind?" />
+              <textarea required rows={5} name="message" className={`${inputCls} resize-none`} placeholder="What's on your mind?" />
             </div>
             <button
               type="submit"
-              disabled={sent}
+              disabled={sent || loading}
               className="group w-full inline-flex items-center justify-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-[0.25em] hover:bg-primary/90 disabled:opacity-70 transition-all"
               style={{ boxShadow: "var(--shadow-glow-green)" }}
             >
               {sent ? (
                 <>[ transmission_complete ] ✓</>
+              ) : loading ? (
+                <>[ sending... ]</>
               ) : (
                 <>
                   <Send className="h-3.5 w-3.5" />
@@ -88,6 +106,8 @@ export function Contact() {
                   <a
                     key={s.label}
                     href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center justify-between border border-white/10 hover:border-primary/60 hover:bg-primary/5 px-3 py-2.5 font-mono text-xs uppercase tracking-wider transition-all"
                   >
                     <span className="flex items-center gap-2">
