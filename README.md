@@ -6,7 +6,7 @@
 ---
 
 ## Live Demo
-🔗 _Coming soon (Vercel deployment)_
+🔗 https://priyanshu-portfolio-v1.vercel.app
 
 ---
 
@@ -17,7 +17,7 @@
 | Framework | React 18 |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 |
-| Routing | TanStack Router |
+| Routing | React (SPA, no router) |
 | Build Tool | Vite |
 | Package Manager | npm |
 
