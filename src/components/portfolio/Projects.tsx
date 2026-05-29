@@ -14,6 +14,16 @@ const projects = [
     demo: "#",
   },
   {
+    name: "Portfolio v1",
+    tagline: "Personal site",
+    description:
+      "Personal portfolio with terminal/holographic aesthetic, animated radar chart, horizontal scroll archive, and working contact form.",
+    stack: ["REACT", "TYPESCRIPT", "VITE", "TAILWIND"],
+    learned: "A design system pays for itself by the second component.",
+    github: "https://github.com/Priyanshu312003/Portfolio",
+    demo: "https://priyanshu-portfolio-v1.vercel.app",
+  },
+  {
     name: "Text Summarizer",
     tagline: "NLP pipeline",
     description:
@@ -21,16 +31,6 @@ const projects = [
     stack: ["PYTHON", "SPACY", "HUGGINGFACE", "BART", "HTML/CSS"],
     learned: "Hybrid models beat single-strategy summarizers on noisy input.",
     github: "https://github.com/Priyanshu312003/Hybrid-Text-Summarization-Tool",
-    demo: "#",
-  },
-  {
-    name: "Portfolio v1",
-    tagline: "Personal site",
-    description:
-      "Responsive personal portfolio with animated UI, reusable components, deployed on GitHub Pages.",
-    stack: ["REACT", "TYPESCRIPT", "TAILWIND"],
-    learned: "A design system pays for itself by the second component.",
-    github: "https://github.com/Priyanshu312003/Portfolio",
     demo: "#",
   },
 ];
