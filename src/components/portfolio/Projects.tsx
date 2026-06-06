@@ -4,6 +4,16 @@ import { ScrollReveal } from "./ScrollReveal";
 
 const projects = [
   {
+    name: "DocMind",
+    tagline: "RAG pipeline",
+    description:
+      "Ask questions from any PDF and get grounded answers with source citations. Built every component from scratch — chunking, embeddings, vector search, reranking, and generation.",
+    stack: ["PYTHON", "OPENAI", "CHROMADB", "COHERE", "STREAMLIT"],
+    learned: "Chunk size and reranking matter more than the LLM itself.",
+    github: "https://github.com/Priyanshu312003/docmind",
+    demo: "https://www.linkedin.com/posts/priyanshu-maurya-737757241_rag-python-machinelearning-ugcPost-7468381213846728704-jJF7/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADwW7FsB2tFsCYn-L5qEsd-1YO104w882JQ",
+  },
+  {
     name: "MindVault",
     tagline: "AI second brain",
     description:
