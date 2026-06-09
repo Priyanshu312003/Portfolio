@@ -14,6 +14,16 @@ const projects = [
     demo: "https://www.linkedin.com/posts/priyanshu-maurya-737757241_rag-python-machinelearning-ugcPost-7468381213846728704-jJF7/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADwW7FsB2tFsCYn-L5qEsd-1YO104w882JQ",
   },
   {
+    name: "Beacon",
+    tagline: "Research agent",
+    description:
+      "Give it a topic — it searches the web, reads 5 sources, and synthesizes a structured markdown report in under 30 seconds.",
+    stack: ["PYTHON", "TAVILY", "OPENAI", "BEAUTIFULSOUP", "STREAMLIT"],
+    learned: "Sometimes the best code is the code you delete — switched from manual scraping to Tavily's built-in content.",
+    github: "https://github.com/Priyanshu312003/Beacon",
+    demo: "https://www.linkedin.com/posts/priyanshu-maurya-737757241_python-ai-buildinpublic-activity-7470122987543797762-KWdM?utm_source=share&utm_medium=member_desktop&rcm=ACoAADwW7FsB2tFsCYn-L5qEsd-1YO104w882JQ",
+  },
+  {
     name: "MindVault",
     tagline: "AI second brain",
     description:
