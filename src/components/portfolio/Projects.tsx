@@ -4,6 +4,16 @@ import { ScrollReveal } from "./ScrollReveal";
 
 const projects = [
   {
+    name: "Cortex",
+    tagline: "Multi-agent system",
+    description:
+      "Give it a goal — a LangGraph pipeline plans subtasks, researches the web, drafts a report, then critiques and retries itself until the output holds up. Streams every agent step live to the UI.",
+    stack: ["PYTHON", "LANGGRAPH", "OPENAI", "QDRANT", "FASTAPI", "REACT"],
+    learned: "A self-critique loop beats a bigger prompt — letting the system grade and retry its own work raised quality more than any single agent tweak.",
+    github: "https://github.com/Priyanshu312003/cortex",
+    demo: "#",
+  },
+  {
     name: "DocMind",
     tagline: "RAG pipeline",
     description:
